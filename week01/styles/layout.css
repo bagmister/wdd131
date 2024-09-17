@@ -1,0 +1,15 @@
+body {
+    text-align: left, justify;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    background-color: #333;
+    align-items: center;
+}
+
+.navigation a {
+    color: burlywood;
+    padding: 1rem;
+}
