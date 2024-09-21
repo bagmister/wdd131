@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
     <title>WDD 131 - Dynamic Web Fundamentals - Kevin Bagley</title>
     <meta
         description="WDD 131 - Dynamic Web Fundamentals, Kevin Bagley, a basic overview of learning principals of wdd131">
@@ -30,15 +31,19 @@
         <section class="card">
             <div id="about-me">
                 <h1 class="sub-heading">About me</h1>
-                <image id="main-image"><img src="images/myPhoto-resized.png" alt="about me picture"></image>
-                <p>My name is Kevin. I am from the United States of America. I currently work for the church as a software engineer.I
-                    am a typical jack of all trades. If I don't know something I learn how to do it.</p>
+                <div id="about-me-content">
+                    <p id="about-me-text">My name is Kevin. I am from the United States of America. I currently work for the church as a software engineer.I
+                        am a typical jack of all trades. If I don't know something I learn how to do it.</p>
+                    <image id="main-image"><img src="images/myPhoto-resized.png" alt="about me picture"></image>
+                </div>
             </div>
             <div id="place">
                 <h1 class="sub-heading">Country</h1>
-                <image id="flag-image"><img src="images/Flag_of_the_United_States_small.png" alt="flag"></image>
-                <p>The United States of America is a wonderful place. There is no other place like it on earth. I love my country and I hope that others will want to keep the experiment going.
-                </p>
+                <div id="place-content">
+                    <image id="place-image"><img src="images/Flag_of_the_United_States_small.png" alt="flag"></image>
+                    <p id="place-text">The United States of America is a wonderful place. There is no other place like it on earth. I love my country and I hope that others will want to keep the experiment going.
+                    </p>
+                </div>
             </div>
         </section>
         <section class="card">
