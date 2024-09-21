@@ -39,13 +39,11 @@ body {
     justify-content: center;
     color: #6d94f0;
     font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
 
 }
 img {
-    overflow-clip-margin: content-box;
     overflow: clip;
 }
 
