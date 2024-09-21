@@ -44,51 +44,41 @@ body {
     font-style: normal;
 
 }
-
-section {
-    display: block;
-    unicode-bidi: isolate;
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
 main{
-    display: grid;
-    grid-template-columns: auto 1rem auto;
     background-color: seashell;
     gap: 1rem;
     margin: 2rem;
     padding: 1rem;
-    border-radius: 20px;
-
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 .card{
-    display: block;
+    float:left;
+    width: 50%;
     font-family: "Mochiy Pop One", sans-serif;
     font-weight: 400;
     font-style: normal;
 
 }
 
-#main-image {
-    height:auto;
-    width: 10%;
-    display: grid;
-    grid-row: 5/6;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-#flag-image {
-    display: grid;
-    grid-row: 2/4;
-    height: auto;
-    width: 10%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 #about-me {
-    display: flex;
-    gap: .1rem;
+    display: grid;
+    grid-template-rows: 3rem;
+    grid-template-columns: 2rem;
+}
+
+section {
+    display: block;
+}
+
+#place {
 
 }
 
@@ -112,8 +102,7 @@ p {
 }
 
 footer {
-    display: grid;
-    grid-area: 2/4;
+    display: block;
     justify-content: center;
     background-color: beige;
     font-family: "Caveat", cursive;
