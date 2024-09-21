@@ -60,6 +60,7 @@ main{
     border-radius: 10px;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    max-width: max-content;
 }
 
 .card{
