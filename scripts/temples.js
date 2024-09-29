@@ -1,11 +1,17 @@
 const hamburgerMenu = document.querySelector('.hamburger')
 const offScreenMenu = document.querySelector('.off-screen-menu')
-const menuSelection = document.querySelector('')
+const navigationMenu = document.querySelector('.navigation')
+const galleryHeader = document.querySelector('#gallery-header')
 
-hamburgerMenu.addEventListener('click',() => {
+hamburgerMenu.addEventListener('click', () => {
   hamburgerMenu.classList.toggle('active');
   offScreenMenu.classList.toggle('active');
-})
+});
+
+navigationMenu.addEventListener('click', (event) => {
+  const navMenuText = event.target.title;
+  galleryHeader.textContent = navMenuText;
+});
 
 const imageUrls = [
   'images/temples/jordan_river_temple_lds.jpeg',
