@@ -117,5 +117,23 @@ footer {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
+}
+
+figure {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  width: 150px;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  padding: 8px;
+  font-size: 1.5rem;
 }

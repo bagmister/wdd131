@@ -1,5 +1,6 @@
 const hamburgerMenu = document.querySelector('.hamburger')
 const offScreenMenu = document.querySelector('.off-screen-menu')
+const menuSelection = document.querySelector('')
 
 hamburgerMenu.addEventListener('click',() => {
   hamburgerMenu.classList.toggle('active');
@@ -7,36 +8,43 @@ hamburgerMenu.addEventListener('click',() => {
 })
 
 const imageUrls = [
-  'images/temples/jordan_river_temple_lds_large.jpeg',
-  'images/temples/laie_temple_large.jpeg',
-  'images/temples/lds_temple_bountiful_utah (1)',
-  'images/temples/logan_utah_temple_flag_large',
-  'images/temples/manti_temple_lds_large',
-  'images/temples/mesa_temple_reflection_large',
-  'images/temples/payson_temple_evening_large',
-  'images/temples/provo_city_center_temple_large',
-  'images/temples/salt_lake_temple_large'
-  // Add more images as needed
+  'images/temples/jordan_river_temple_lds.jpeg',
+  'images/temples/laie_temple.jpeg',
+  'images/temples/lds_temple_bountiful_utah.jpeg',
+  'images/temples/logan_utah_temple_flag.jpeg',
+  'images/temples/manti_temple_lds.jpeg',
+  'images/temples/mesa_temple_reflection.jpeg',
+  'images/temples/payson_temple_evening.jpeg',
+  'images/temples/provo_city_center_temple.jpeg',
+  'images/temples/salt_lake_temple.jpeg'
+
 ];
 
-// Function to create and append image divs to the gallery
 function populateGallery() {
-  const gallery = document.getElementById('gallery');
+  const gallery = document.querySelector('.gallery');
 
   imageUrls.forEach(url => {
-      const imageContainer = document.createElement('div');
-      imageContainer.classList.add('image-container');
-
+      const figure = document.createElement('figure');
+      const regex = /([^/]+)(?=\.jpeg$)/;
+      const path = url
+      const imageAlt = path.match(regex);
+      const filenameWithSpaces = imageAlt[1].replace(/_/g, ' ');
+      const capitalized = filenameWithSpaces
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
       const img = document.createElement('img');
       img.src = url;
-      img.alt = 'Image';
+      img.alt = imageAlt;
 
-      imageContainer.appendChild(img);
-      gallery.appendChild(imageContainer);
+      const figcaption = document.createElement('figcaption');
+      figcaption.textContent = capitalized;
+
+      figure.appendChild(img);
+      figure.appendChild(figcaption);
+
+      gallery.appendChild(figure);
   });
 }
-
-// Call the function to populate the gallery
 populateGallery();
-
 
