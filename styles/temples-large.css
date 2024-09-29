@@ -25,5 +25,7 @@
   .navigation a:hover {
     background-color: yellow;
   }
-
+  .off-screen-menu{
+    display: none;
+  }
 }
