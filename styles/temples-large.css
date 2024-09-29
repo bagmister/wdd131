@@ -1,0 +1,29 @@
+@media (min-width:37.5em) {
+  
+  .navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    
+  }
+  .hamburger{
+    display: none;
+  }
+  
+  .navigation a {
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+  
+  .navigation a:hover {
+    background-color: yellow;
+  }
+
+}
