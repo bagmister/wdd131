@@ -13,6 +13,11 @@ navigationMenu.addEventListener('click', (event) => {
   galleryHeader.textContent = navMenuText;
 });
 
+offScreenMenu.addEventListener('click', (event) => {
+  const navMenuText = event.target.title;
+  galleryHeader.textContent = navMenuText;
+});
+
 const imageUrls = [
   'images/temples/jordan_river_temple_lds.jpeg',
   'images/temples/laie_temple.jpeg',
