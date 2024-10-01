@@ -80,6 +80,10 @@
 
 }
 
+ul {
+  list-style-type: none;
+}
+
 main{
   background-color: seashell;
   gap: 1rem;

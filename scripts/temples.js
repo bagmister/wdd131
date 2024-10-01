@@ -19,15 +19,15 @@ offScreenMenu.addEventListener('click', (event) => {
 });
 
 const imageUrls = [
-  'images/temples/jordan_river_temple_lds.jpeg',
-  'images/temples/laie_temple.jpeg',
-  'images/temples/lds_temple_bountiful_utah.jpeg',
-  'images/temples/logan_utah_temple_flag.jpeg',
-  'images/temples/manti_temple_lds.jpeg',
-  'images/temples/mesa_temple_reflection.jpeg',
-  'images/temples/payson_temple_evening.jpeg',
-  'images/temples/provo_city_center_temple.jpeg',
-  'images/temples/salt_lake_temple.jpeg'
+  'images/temples/bountiful_temple.webp',
+  'images/temples/jordan_river_temple.webp',
+  'images/temples/laie_temple.webp',
+  'images/temples/logan_utah_temple.webp',
+  'images/temples/manti_temple.webp',
+  'images/temples/mesa_arizona_temple.webp',
+  'images/temples/payson_utah_temple.webp',
+  'images/temples/provo_city_center_temple.webp',
+  'images/temples/salt_lake_temple.webp'
 
 ];
 
@@ -36,7 +36,7 @@ function populateGallery() {
 
   imageUrls.forEach(url => {
       const figure = document.createElement('figure');
-      const regex = /([^/]+)(?=\.jpeg$)/;
+      const regex = /([^/]+)(?=\.webp$)/;
       const path = url
       const imageAlt = path.match(regex);
       const filenameWithSpaces = imageAlt[1].replace(/_/g, ' ');
