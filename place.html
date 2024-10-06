@@ -1,0 +1,61 @@
+~<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Mochiy+Pop+One&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/places.css">
+    <link rel="stylesheet" type="text/css" href="styles/places-large.css">
+    <script src="scripts/places.js" defer></script>
+    <meta name="description" content="place I am from">
+    <meta name="author" content="Kevin Bagley">
+    <title>WDD 131 - Dynamic Web Fundamentals - Place info - Kevin Bagley</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="place-title">United States Of America</h1>
+    </header>
+    <main class="place-container">
+      <picture>
+        <source srcset="images/place/trainNextToRiver.webp"alt="Train next to a river - image made with generative AI" media="(max-width: 600px)">
+        <source srcset="images/place/trainWithMine.webp" alt="Train with Mine - image made with generative AI" media="(max-width: 1200px)">
+        <img src="images/place/trainWithWaterfall.webp" alt="Train in the Rocky Mountains - image made with generative AI">
+      </picture>
+      <div class="data">
+        <h2 class="data-title"></h2>
+        <ol class="data-list">
+          <li>Area: 3.8 million square Miles</li>
+          <li>Population: 333 million people</li>
+          <li>Capital: Washington D.C.</li>
+          <li>Language: No official Lanugage is specified in the United States of America. However, English is the most spoken Language.</li>
+          <li>Currency: U.S. Dollar</li>
+          <li class="timezone">Time Zones: 
+            Eastern Standard Time (EST): UTC-5 (UTC-4 during Daylight Saving Time).
+            Central Standard Time (CST): UTC-6 (UTC-5 during Daylight Saving Time).
+            Mountain Standard Time (MST): UTC-7 (UTC-6 during Daylight Saving Time).
+            Pacific Standard Time (PST): UTC-8 (UTC-7 during Daylight Saving Time).
+            Alaska Standard Time (AKST): UTC-9 (UTC-8 during Daylight Saving Time).
+            Hawaii-Aleutian Standard Time (HAST): UTC-10 (does not observe Daylight Saving Time)</li>
+          <li>Calling Code: +1</li>
+          <li>Internet TLD: .us</li>
+        </ol>
+      </div>
+      <div class="weather">
+        <h2 class="weather-title"></h2>
+        <ol class="weather-list">
+          <li>Temperature: </li>
+          <li>Conditions: </li>
+          <li>Wind: </li>
+          <li class="wind-chill">Wind Chill: </li>
+        </ol>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Kevin Bagley, United States of America</p>
+      <p>Last Modified <span id="lastModified"></span> </p> 
+    </footer>
+  </body>
+</html>
