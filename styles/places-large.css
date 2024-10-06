@@ -3,7 +3,7 @@
   .place-container {
     position: relative;
     width: 100%;
-    max-width: auto; /* Adjust as needed */
+    max-width: none;
 }
 
 .main-image img {
@@ -18,27 +18,27 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
-  color: white; /* Text color */
-  padding: 20px; /* Padding for the overlay */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: space-between; /* Space between data and weather sections */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .data, .weather {
-  background: rgba(255, 255, 255, 0.2); /* Slightly translucent white background for readability */
-  padding: 15px; /* Padding for inner content */
-  border-radius: 8px; /* Rounded corners */
-  width: 30%; /* Responsive width */
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  width: 30%;
 }
 
 .data {
-  align-self: flex-start; /* Align to the left */
+  align-self: flex-start;
 }
 
 .weather {
-  align-self: flex-end; /* Align to the right */
+  align-self: flex-end;
 }
 
 }

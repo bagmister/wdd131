@@ -20,7 +20,7 @@ body {
 .place-container {
     position: relative;
     width: 100%;
-    max-width: auto;
+    max-width: none;
 }
 
 .main-image img {
@@ -42,14 +42,15 @@ footer {
 }
 
 .data, .weather {
-  background: lightgray; /* Slightly translucent white background for readability */
-  padding: 15px; /* Padding for inner content */
-  border-radius: 8px; /* Rounded corners */
-  width: 100%; /* Responsive width */
+  background: lightgray;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  font-family: "Mochiy Pop One", sans-serif;
 }
 
 .data {
-  align-self: flex-start; /* Align to the left */
+  align-self: flex-start;
   
 }
 
@@ -58,11 +59,11 @@ footer {
   justify-content: center;
   font-family: "Mochiy Pop One", sans-serif;
   font-weight: 100;
-  color: rgb(114, 86, 1);
+  color: rgb(250, 250, 249);
 }
 
 .weather {
-  align-self: flex-end; /* Align to the right */
+  align-self: flex-end;
   align-items: center;
   
 }
