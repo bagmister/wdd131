@@ -1,7 +1,44 @@
-@media (min-width:37.5em) {
+@media (min-width:600px) {
 
+  .place-container {
+    position: relative;
+    width: 100%;
+    max-width: auto; /* Adjust as needed */
+}
 
+.main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
+  color: white; /* Text color */
+  padding: 20px; /* Padding for the overlay */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space between data and weather sections */
+}
 
+.data, .weather {
+  background: rgba(255, 255, 255, 0.2); /* Slightly translucent white background for readability */
+  padding: 15px; /* Padding for inner content */
+  border-radius: 8px; /* Rounded corners */
+  width: 30%; /* Responsive width */
+}
+
+.data {
+  align-self: flex-start; /* Align to the left */
+}
+
+.weather {
+  align-self: flex-end; /* Align to the right */
+}
 
 }

@@ -2,3 +2,67 @@
   margin: 0;
   padding: 0;
 }
+body {
+  min-height: 100vh;
+}
+
+.place-title {
+  color: antiquewhite;
+  justify-content: center;
+  background-color: red;
+  font-family: "Caveat", cursive;
+  font-weight: 800;
+  font-style: normal;
+  display: flex;
+  padding: 1rem;
+}
+
+.place-container {
+    position: relative;
+    width: 100%;
+    max-width: auto;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: beige;
+  font-family: "Caveat", cursive;
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-style: normal;
+  padding: 1rem;
+}
+
+.data, .weather {
+  background: lightgray; /* Slightly translucent white background for readability */
+  padding: 15px; /* Padding for inner content */
+  border-radius: 8px; /* Rounded corners */
+  width: 100%; /* Responsive width */
+}
+
+.data {
+  align-self: flex-start; /* Align to the left */
+  
+}
+
+.data-title, .weather-title{
+  display: flex;
+  justify-content: center;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 100;
+  color: rgb(114, 86, 1);
+}
+
+.weather {
+  align-self: flex-end; /* Align to the right */
+  align-items: center;
+  
+}
