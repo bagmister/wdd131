@@ -8,15 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Mochiy+Pop+One&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles/temples.css">
-  <link rel="stylesheet" type="text/css" href="styles/temples-large.css">
-  <script src="scripts/temples.js" defer></script>
-  <script src="scripts/getdates.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="styles/filtered-temples.css">
+  <link rel="stylesheet" type="text/css" href="styles/filtered-temples-large.css">
+  <script src="scripts/filtered-temples.js" defer></script>
   <meta name="description" content="Temple picture album">
   <meta name="author" content="Kevin Bagley">
   <title>WDD 131 - Dynamic Web Fundamentals - Temples Gallery - Kevin Bagley</title>
 </head>
-
 <body>
   <header>
     <div class="menu">
@@ -36,13 +34,12 @@
         <span></span>
       </div>
       <nav class="navigation">
-        <a href="#" title="Home">Home</a>
-        <a href="#" title="Old">Old</a>
-        <a href="#" title="New">New</a>
-        <a href="#" title="Large">Large</a>
-        <a href="#" title="Small">Small</a>
+        <a href="#" id="home" title="Home">Home</a>
+        <a href="#" id="old" title="Old">Old</a>
+        <a href="#" id="new" title="New">New</a>
+        <a href="#" id="large" title="Large">Large</a>
+        <a href="#" id="small" title="Small">Small</a>
       </nav>
-    </div>
   </header>
   <main>
     <h2 id="gallery-header">Home</h2>
