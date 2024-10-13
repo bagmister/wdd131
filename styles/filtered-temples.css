@@ -96,7 +96,7 @@ main{
 }
 
 footer {
-  display: block;
+  display: flex;
   justify-content: center;
   background-color: beige;
   font-family: "Caveat", cursive;
@@ -133,20 +133,12 @@ footer {
   font-size: 3rem;
 }
 
-figure {
+.temple-card {
   border: 2px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
-  width: 150px;
-}
-
-figure img {
-  width: 100%;
-  height: auto;
-}
-
-figcaption {
-  padding: 8px;
-  font-size: 1.5rem;
+  min-width: 400px;
+  display: grid;
+  position: relative;
 }

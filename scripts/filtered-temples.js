@@ -42,6 +42,7 @@ function populateGallery(filteredTemples) {
   document.querySelector('.gallery').innerHTML = "";
   filteredTemples.forEach(temple => {
       let figure = document.createElement('section');
+      figure.className = 'temple-card';
       let img = document.createElement('img');
       let name = document.createElement('h3')
       let location = document.createElement('p')
