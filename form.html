@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Mochiy+Pop+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <meta name="description" content="Temple picture album">
+    <meta name="author" content="Kevin Bagley">
+    <title>WDD 131 - Dynamic Web Fundamentals - forum - Kevin Bagley</title>
+</head>
+
+<body>
+    <main>
+        <form method="get" action="review.html">
+            <label for="product-array">Product name:</label>
+            <select id="product-array" required>
+                <option value="" selected disabled>Select a Product ...</option>
+            </select>
+
+            <label for="star-rating">Overall Rating</label>
+
+            <label for="5-star">&#9733;&#9733;&#9733;&#9733;&#9733;</label>
+            <input type="radio" name="star-rating" id="5-star" value="5 Star" required>
+            <label for="4-star">&#9733;&#9733;&#9733;&#9733;</label>
+            <input type="radio" name="star-rating" id="4-star" value="4 Star" required>
+            <label for="3-star">&#9733;&#9733;&#9733;</label>
+            <input type="radio" name="star-rating" id="3-star" value="3 Star" required>
+            <label for="2-star">&#9733;&#9733;
+                <input type="radio" name="star-rating" id="2-star" value="2 Star" required>
+                <label for="1-star">&#9733;</label>
+                <input type="radio" name="star-rating" id="1-star" value="1 Star" required>
+
+                <label for="">Date of installation</label>
+                <input type="date" id="installation-date" value="installation-date" required>
+
+                <label for="useful-product">Which features did you find useful in the product?</label>
+                <label for="useful-product">(Check all that apply)</label>
+                <label for="durability">Durability</label>
+                <input type="checkbox" id="durability" value="durability">
+                <label for="ease-of-use">Ease of Use</label>
+                <input type="checkbox" id="ease-of-use" value="ease-of-use">
+                <label for="performance">Performance</label>
+                <input type="checkbox" id="performance" value="performance">
+                <label for="design">Design</label>
+                <input type="checkbox" id="design" value="design">
+
+                <label>Written Review (optional)</label>
+                <textarea id="written-review" value="written-review"></textarea>
+
+                <label for="name">Your Name (optional)</label>
+                <input type="text" id="name" value="name">
+
+                <label>Post review</label>
+                <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Kevin Bagley, United States of America</p>
+        <p>Last Modified <span id="lastModified"></span> </p>
+    </footer>
+</body>
+
+</html>
