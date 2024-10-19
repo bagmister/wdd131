@@ -52,6 +52,24 @@ function currentYear() {
     const currentYearValue = new Date().getFullYear();
     document.querySelector("#currentyear").innerHTML = currentYearValue;
 }
+if (!localStorage.getItem('reviewCounter')) {
+    localStorage.setItem('reviewCounter', 0);
+}
 
+function updateCounterDisplay() {
+    const counter = localStorage.getItem('reviewCounter');
+    document.querySelector('.counterDisplayReview').textContent = `Reviews Completed: ${counter}`;
+}
+
+
+document.querySelector('.form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    let currentCount = parseInt(localStorage.getItem('reviewCounter'), 10);
+    localStorage.setItem('reviewCounter', currentCount + 1);
+    updateCounterDisplay();
+});
+
+window.updateCounterDisplay();
 window.addEventListener('load', currentYear)
 window.addEventListener('load', lastModified)
