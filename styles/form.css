@@ -1,0 +1,27 @@
+.form{
+    background-color: seashell;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.heading {
+    display: flex;
+    font-family: "Caveat", cursive;
+    justify-content: center;
+    background-color: beige;
+}
+
+  footer {
+    display: flex;
+    background-color: beige;
+    font-family: "Caveat", cursive;
+    font-weight: 800;
+    font-size: 1.5rem;
+    font-style: normal;
+    padding: 1rem;
+    justify-content: center;
+  }
