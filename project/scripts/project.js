@@ -31,5 +31,8 @@ function currentYear() {
   document.querySelector("#currentyear").innerHTML = currentYearValue;
 }
 
+
+
+
 window.addEventListener('load',currentYear)
 window.addEventListener('load',lastModified)
