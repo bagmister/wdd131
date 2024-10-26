@@ -2,9 +2,9 @@ const hamburgerMenu = document.querySelector('.hamburger')
 const offScreenMenu = document.querySelector('.off-screen-menu')
 const navigationMenu = document.querySelector('.navigation')
 const projectheader = document.querySelector('#project-header')
-const printers = document.querySelector('#printers')
-const fillements = document.querySelector('#fillements')
-const home = document.querySelector('#home')
+const printersListener = document.querySelector('#printers')
+const fillementsListener = document.querySelector('#fillements')
+const homeListener = document.querySelector('#home')
 
 
 hamburgerMenu.addEventListener('click', () => {
@@ -49,41 +49,82 @@ const Printers = [
 ];
 const filaments = [
   {
-    type : "filament"
+    type : "filament",
+    name: "PLA+",
+    url : "https://www.amazon.com/ELEGOO-Filament-Stronger-Dimensional-Accuracy/dp/B0C14PVBPB/ref=sr_1_3?sr=8-3",
+    imageUrl : "https://m.media-amazon.com/images/I/81a+NTt9wLL._AC_SL1500_.jpg",
+    description : "An upgraded version of PLA. This is a fantastic all around fillament. People make all kinds of parts with this. This should be used over traditional PLA. Cost is not much more than PLA."
   },
   {
-    type : "filament"
+    type : "filament",
+    name: "PEGT",
+    url : "https://www.amazon.com/Official-Creality-Precision-Toughness-Moistureproof/dp/B0C8NP63GD/ref=sr_1_4?sr=8-4",
+    imageUrl : "https://m.media-amazon.com/images/I/71heBpNZffL._SL1500_.jpg",
+    description : "PETG is a fantastic material. It is suseptible to water. So you need to make sure it is printed in a dry climate or you would need a dryer. This is a great filament for building things for out door use and things that would be exposed to UV light for an extended period of time."
+  },
+  {
+    type : "filament",
+    name: "TPU",
+    url : "https://www.amazon.com/Creality-Filament-Printing-Resilience-Adhesive/dp/B0C7BXRD3B/ref=sr_1_10?sr=8-10",
+    imageUrl : "https://m.media-amazon.com/images/I/71hqzY5ZFDL._AC_SL1500_.jpg",
+    description : "This is a flexible filament and is nearly indestructable. You can make shoe souls out of it, bouncy balls, tires, gaskets and other parts that need to be flexible. When using a harder version of it like 95A. The object will be nearly indestructable."
   }
 ];
 const indexPage = [
   {
-    type : "home"
-  },
-  {
-    type : "home"
+    type : "home",
+    name : "welcome",
+    imageUrl : "images/myPhoto-resized.png",
+    description: "Welcome! I am so glad you are here. In this website I am going to give some breif info on 3d printers and filaments that can be used on these intro printers."
   }
 ]
 
 function populatePage(objects) {
-  const pageElement = document.querySelector('.page');
-  pageElement.innerHTML = "";
-  if (window.location.pathname.endsWith('printers.html')) {
-    pageElement.classList.remove('page');
-    pageElement.classList.add('printer');
-    processArray(objects)
+  const selectors = ['.page', '.filaments', '.home', '.printer'];
+  let pageElement = null;
+
+  for (const selector of selectors) {
+    pageElement = document.querySelector(selector);
+    if (pageElement) break;
   }
-  if (window.location.pathname.endsWith('filaments.html')) {
-    pageElement.classList.remove('page');
-    pageElement.classList.add('filaments');
-    processArray(objects)
-  } 
-  if (window.location.pathname.endsWith('index.html')) {
-    pageElement.classList.remove('page');
-    pageElement.classList.add('home');
-    processArray(objects)
+
+  if (!pageElement) {
+    console.error('No valid page element found.');
+    return;
+  }
+
+  // Clear the content of the section on page load
+  sectionToClear = document.getElementById('mySection');
+  if (sectionToClear) {
+    sectionToClear.innerHTML = ''; // Clear the content
+  }
+
+  let newClass = '';
+  const classesToRemove = ['page', 'filaments', 'printer', 'home'];
+
+  if (window.location.pathname.endsWith('printers.html')) {
+    newClass = 'printer';
+  } else if (window.location.pathname.endsWith('filaments.html')) {
+    newClass = 'filaments';
+  } else if (window.location.pathname.endsWith('index.html')) {
+    newClass = 'home';
+  }
+
+  // Remove the relevant classes
+  classesToRemove.forEach(cls => {
+    if (cls !== newClass) {
+      pageElement.classList.remove(cls);
+    }
+  });
+
+  // Only process the array if there is a new class
+  if (newClass) {
+    pageElement.classList.add(newClass);
+    processArray(objects, pageElement);
   }
 }
-function processArray(objects) {
+
+function processArray(objects, pageElement) {
   objects.forEach(object => {
     let figure = document.createElement('section');
     figure.className = 'page-card';
@@ -96,9 +137,20 @@ function processArray(objects) {
     img.loading = "lazy";
 
     if (object.type.includes("printer")) {
-      img.alt = object.printerName;
-      name.textContent = object.printerName;
+      img.alt = object.name;
       name.innerHTML = `<span class="label">Printer:</span> ${object.name}`;
+      url.innerHTML = `<span class="label">Where to buy:</span> <a href="${object.url}" target="_blank">${object.url}</a>`;
+      description.innerHTML = `<span class="label"></span> ${object.description}`;
+    }
+    if (object.type.includes("home")) {
+      img.alt = object.name;
+      name.innerHTML = `<span class="label">About:</span> ${object.name}`;
+      url.innerHTML = `<span class="label">General Info:</span> <a href="${object.url}" target="_blank">${object.url}</a>`;
+      description.innerHTML = `<span class="label"></span> ${object.description}`;
+    }
+    if (object.type.includes("filament")) {
+      img.alt = object.name;
+      name.innerHTML = `<span class="label">Filament:</span> ${object.name}`;
       url.innerHTML = `<span class="label">Where to buy:</span> <a href="${object.url}" target="_blank">${object.url}</a>`;
       description.innerHTML = `<span class="label"></span> ${object.description}`;
     }
@@ -112,10 +164,16 @@ function processArray(objects) {
   });
 }
 
-
-populatePage(Printers)
-populatePage(filaments)
-populatePage(indexPage)
+// Event listeners for loading specific arrays based on the active page
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.location.pathname.endsWith('printers.html')) {
+    populatePage(Printers);
+  } else if (window.location.pathname.endsWith('filaments.html')) {
+    populatePage(filaments);
+  } else if (window.location.pathname.endsWith('index.html')) {
+    populatePage(indexPage);
+  }
+});
 
 window.addEventListener('load',currentYear)
 window.addEventListener('load',lastModified)
