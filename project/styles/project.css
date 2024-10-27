@@ -26,6 +26,7 @@ body {
   width : 50px;
   margin-left: auto;
   position: relative;
+  z-index: 1000;
 }
 
 .hamburger span {
@@ -78,6 +79,7 @@ body {
   font-size: 2rem;
   transition: 1s ease;
   font-family: "Caveat", cursive;
+  z-index: 900;
 }
 
 .off-screen-menu.active {
@@ -105,6 +107,17 @@ footer {
   position: relative;
   width: 100%;
   max-width: none;
+}
+
+.label {
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  justify-content: space-around;
+  background-color: seashell;
+  display: block;
 }
 
 img {

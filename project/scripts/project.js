@@ -93,10 +93,9 @@ function populatePage(objects) {
     return;
   }
 
-  // Clear the content of the section on page load
   sectionToClear = document.getElementById('mySection');
   if (sectionToClear) {
-    sectionToClear.innerHTML = ''; // Clear the content
+    sectionToClear.innerHTML = '';
   }
 
   let newClass = '';
@@ -110,14 +109,12 @@ function populatePage(objects) {
     newClass = 'home';
   }
 
-  // Remove the relevant classes
   classesToRemove.forEach(cls => {
     if (cls !== newClass) {
       pageElement.classList.remove(cls);
     }
   });
 
-  // Only process the array if there is a new class
   if (newClass) {
     pageElement.classList.add(newClass);
     processArray(objects, pageElement);
@@ -138,21 +135,21 @@ function processArray(objects, pageElement) {
 
     if (object.type.includes("printer")) {
       img.alt = object.name;
-      name.innerHTML = `<span class="label">Printer:</span> ${object.name}`;
-      url.innerHTML = `<span class="label">Where to buy:</span> <a href="${object.url}" target="_blank">${object.url}</a>`;
-      description.innerHTML = `<span class="label"></span> ${object.description}`;
+      name.innerHTML = `<span class="label">Printer: ${object.name}</span>`;
+      url.innerHTML = `<span class="label">Where to buy: <a href="${object.url}" target="_blank">${object.url}</a></span>`;
+      description.innerHTML = `<span class="label">Description: ${object.description}</span>`;      
     }
     if (object.type.includes("home")) {
       img.alt = object.name;
-      name.innerHTML = `<span class="label">About:</span> ${object.name}`;
-      url.innerHTML = `<span class="label">General Info:</span> <a href="${object.url}" target="_blank">${object.url}</a>`;
-      description.innerHTML = `<span class="label"></span> ${object.description}`;
+      name.innerHTML = `<span class="label">About: ${object.name}</span>`;
+      url.innerHTML = `<span class="label">General Info: <a href="${object.url}" target="_blank">${object.url}</a></span>`;
+      description.innerHTML = `<span class="label">Description: ${object.description}</span>`;      
     }
     if (object.type.includes("filament")) {
       img.alt = object.name;
-      name.innerHTML = `<span class="label">Filament:</span> ${object.name}`;
-      url.innerHTML = `<span class="label">Where to buy:</span> <a href="${object.url}" target="_blank">${object.url}</a>`;
-      description.innerHTML = `<span class="label"></span> ${object.description}`;
+      name.innerHTML = `<span class="label">Filament: ${object.name}</span>`;
+      url.innerHTML = `<span class="label">Where to buy:  <a href="${object.url}" target="_blank"> ${object.url}</a></span>`;
+      description.innerHTML = `<span class="label">Description: ${object.description}</span>`;      
     }
 
     figure.appendChild(img);
