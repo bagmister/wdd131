@@ -74,7 +74,8 @@ const indexPage = [
     type : "home",
     name : "welcome",
     imageUrl : "images/myPhoto-resized.png",
-    description: "Welcome! I am so glad you are here. In this website I am going to give some breif info on 3d printers and filaments that can be used on these intro printers."
+    description: "Welcome! I am so glad you are here. In this website I am going to give some breif info on 3d printers and filaments that can be used on these intro printers.",
+    url: "#"
   }
 ]
 
@@ -128,7 +129,7 @@ function processArray(objects, pageElement) {
     let figure = document.createElement('section');
     figure.className = 'page-card';
     let img = document.createElement('img');
-    let name = document.createElement('h3');
+    let name = document.createElement('h2');
     let url = document.createElement('p');
     let description = document.createElement('p');
 
