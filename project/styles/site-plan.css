@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.menu {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  background-color: #88abfd;
+  gap: 1rem;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+
+h2 {
+  background-color: seashell;
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+}
+
+footer {
+    display: flex;
+    background-color: beige;
+    font-family: "Caveat", cursive;
+    font-weight: 800;
+    font-size: 2rem;
+    font-style: normal;
+    padding: 1rem;
+    justify-content: center;
+  }
+
+.item {
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  justify-content: space-around;
+  background-color: seashell;
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-width: 10rem;
+}
