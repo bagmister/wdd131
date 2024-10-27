@@ -22,7 +22,24 @@
   .navigation a:hover {
     background-color: yellow;
   }
+  
   .off-screen-menu{
     display: none;
+  }
+
+  footer {
+    display: flex;
+    background-color: beige;
+    font-family: "Caveat", cursive;
+    font-weight: 800;
+    font-size: 1.5rem;
+    font-style: normal;
+    padding: 1rem;
+    justify-content: center;
+  }
+  img {
+    width: 75%;
+    height: auto;
+    display: block;
   }
 }

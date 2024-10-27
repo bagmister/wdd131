@@ -1,7 +1,6 @@
 const hamburgerMenu = document.querySelector('.hamburger')
 const offScreenMenu = document.querySelector('.off-screen-menu')
 const navigationMenu = document.querySelector('.navigation')
-const projectheader = document.querySelector('#project-header')
 const printersListener = document.querySelector('#printers')
 const fillementsListener = document.querySelector('#fillements')
 const homeListener = document.querySelector('#home')
@@ -35,7 +34,7 @@ const Printers = [
   {
     type: "printer",
     name: "Bambu Lab A1 Mini",
-    imageUrl : "https://cdn1.bambulab.com/a1/video/print-8bbbda52c0ea5/0.jpg",
+    imageUrl : "images/babmulabsA1Mini.webp",
     url : "https://bambulab.com/en/a1-mini",
     description : "A bit nicer of a printer. This one is also an entry level printer. It has the ability to print multi filament. It only has the single z axis support for the printer. It does have a smaller printer bed but it has a lot of the same features of the Ender 3 V3 SE. The A1 Mini is a very well built printer."
   },
